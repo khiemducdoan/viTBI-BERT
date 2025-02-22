@@ -1,0 +1,26 @@
+data:
+  batch_size: 32
+  num_workers: 4
+  num_output: 4  # Number of output classes; adjust as per your dataset
+  stop_words_file: /media/data3/home/khiemdd/ViTBERT/dataset/needed_files/vietnamese-stopwords.txt
+  wordnet_file: /media/data3/home/khiemdd/ViTBERT/dataset/needed_files/word_net_vi.jsonx
+model_save_path: "best_model.pt"
+train:
+  early_stopping_patience: 6
+  lr: 0.00005
+    # max: 0.1
+    # min: 0.0000001 # Learning rate
+  epochs: 30  # Number of training epochs; adjust as needed
+  date: "23_4_2004"
+  dropout_rate : 0.2
+  num_layers : 1
+  num_sweep : 41
+  k_folds : 10
+  project_name: "ViTBERT_augment_before"
+
+path:
+  train_path: '/media/data3/home/khiemdd/ViTBERT/dataset/dataset_non_preprocessing/after.csv'  # Path to the training data; adjust as needed
+  test_path: '/media/data3/home/khiemdd/ViTBERT/dataset/dataset_chi_ha_hieu/dataset_final_test_after.csv'  # Path to the testing data; adjust as needed
+
+model:
+  pretrained_name: "demdecuong/vihealthbert-base-word" # Name of the pretrained model; adjust as needed 

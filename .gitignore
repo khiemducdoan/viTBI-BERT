@@ -1,0 +1,34 @@
+# Bỏ qua tất cả file zip
+*.zip
+
+# Bỏ qua thư mục VnCoreNLP
+VnCoreNLP/
+vncorenlp/
+
+# Bỏ qua file log output
+nohup.out
+
+# Bỏ qua tất cả file CSV
+*.csv
+*.pt
+*.out
+# Bỏ qua thư mục wandb (Weights & Biases logs)
+wandb/
+src/wandb/
+src/modelpt/
+src/__pycache__/
+dataset/
+# Bỏ qua tất cả file text
+*.txt
+
+# Bỏ qua thư mục wandb một lần nữa (đề phòng trùng lặp)
+wandb/
+
+# Bỏ qua thư mục cụ thể viTBI-BERT/Tất cả TBI (sau lọc)
+"Tất cả TBI (sau lọc)/"
+"Ban đầu/"
+"Có tiên lượng/"
+view?usp=drive_link
+view?usp=sharing
+view?usp=sharing.1
+view?usp=sharing.2

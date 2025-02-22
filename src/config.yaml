@@ -1,0 +1,27 @@
+data:
+  batch_size: [1,2,4,8,16]
+  num_workers: 4
+  num_output: 4  # Number of output classes; adjust as per your dataset
+model_save_path: "best_model.pt"
+train:
+  early_stopping_patience: 6
+  lr: 0.00000721128608800314
+    # max: 0.1
+    # min: 0.0000001 # Learning rate
+  lr_max: 0.0001
+  lr_min: 0.000001
+  epochs: 40  # Number of training epochs; adjust as needed
+  date: "6/4/2024"
+  dropout_rate : [0.1, 0.2,0.3,0.4]
+  num_layer : [1,2,3]
+  num_sweep : 30
+  project_name: "ViTBERT_augment_after_freeze2"
+
+path:
+  train_path: '/media/data3/home/khiemdd/ViTBERT/dataset/dataset_chi_ha_hieu/dataset_final_train_after.csv'  # Path to the training data; adjust as needed
+  test_path: '/media/data3/home/khiemdd/ViTBERT/dataset/dataset_chi_ha_hieu/dataset_final_test_after.csv'  # Path to the testing data; adjust as needed
+
+model:
+  pretrained_name: ["demdecuong/vihealthbert-base-syllable","demdecuong/vihealthbert-base-word"]  # Name of the pretrained model; adjust as needed
+sweep:
+  "method"
